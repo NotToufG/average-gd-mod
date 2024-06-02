@@ -1,25 +1,21 @@
 package states;
 
-import backend.WeekData;
 import backend.Highscore;
-
-import flixel.input.keyboard.FlxKey;
+import backend.WeekData;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.graphics.frames.FlxFrame;
 import flixel.group.FlxGroup;
 import flixel.input.gamepad.FlxGamepad;
+import flixel.input.keyboard.FlxKey;
 import haxe.Json;
-
 import openfl.Assets;
 import openfl.display.Bitmap;
 import openfl.display.BitmapData;
-
 import shaders.ColorSwap;
-
-import states.StoryMenuState;
-import states.OutdatedState;
 import states.MainMenuState;
+import states.OutdatedState;
+import states.StoryMenuState;
 
 typedef TitleData =
 {
@@ -551,7 +547,7 @@ class TitleState extends MusicBeatState
 					#if PSYCH_WATERMARKS
 					createCoolText(['Psych Engine by'], 40);
 					#else
-					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
+					createCoolText(['The AGDT']);
 					#end
 				case 4:
 					#if PSYCH_WATERMARKS
@@ -570,10 +566,8 @@ class TitleState extends MusicBeatState
 					#end
 				case 8:
 					addMoreText('newgrounds', -40);
-					ngSpr.visible = true;
 				case 9:
 					deleteCoolText();
-					ngSpr.visible = false;
 				case 10:
 					createCoolText([curWacky[0]]);
 				case 12:

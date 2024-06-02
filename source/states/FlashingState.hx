@@ -1,10 +1,9 @@
 package states;
 
 import flixel.FlxSubState;
-
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import lime.app.Application;
-import flixel.addons.transition.FlxTransitionableState;
 
 class FlashingState extends MusicBeatState
 {
@@ -19,11 +18,10 @@ class FlashingState extends MusicBeatState
 		add(bg);
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			"Hey, watch out!\n
-			This Mod contains some flashing lights!\n
-			Press ENTER to disable them now or go to Options Menu.\n
+		"Hey, you probably already know the drill.\n
+			Press ENTER to disable flashing lights.\n
 			Press ESCAPE to ignore this message.\n
-			You've been warned!",
+			Have fun!",
 			32);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
